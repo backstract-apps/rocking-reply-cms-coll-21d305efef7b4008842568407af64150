@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rocking-reply-cms-coll-21d305efef7b4008842568407af64150-depl
+  labels:
+    app: rocking-reply-cms-coll-21d305efef7b4008842568407af64150
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rocking-reply-cms-coll-21d305efef7b4008842568407af64150
+  template:
+    metadata:
+      labels:
+        app: rocking-reply-cms-coll-21d305efef7b4008842568407af64150
+    spec:
+      containers:
+        - name: rocking-reply-cms-coll-21d305efef7b4008842568407af64150
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:rocking-reply-cms-coll-21d305efef7b4008842568407af64150
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9019

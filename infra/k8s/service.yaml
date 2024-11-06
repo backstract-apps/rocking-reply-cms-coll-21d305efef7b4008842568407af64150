@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rocking-reply-cms-coll-21d305efef7b4008842568407af64150-srv
+spec:
+  selector:
+    app: rocking-reply-cms-coll-21d305efef7b4008842568407af64150
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9019
+  type: ClusterIP
